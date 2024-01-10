@@ -36,3 +36,4 @@ C:\Users\us\Documents\C#\MicroservicesForInventory\ApiGetWay\obj\Debug\net8.0\re
 C:\Users\us\Documents\C#\MicroservicesForInventory\ApiGetWay\obj\Debug\net8.0\ApiGetWay.pdb
 C:\Users\us\Documents\C#\MicroservicesForInventory\ApiGetWay\obj\Debug\net8.0\ApiGetWay.genruntimeconfig.cache
 C:\Users\us\Documents\C#\MicroservicesForInventory\ApiGetWay\obj\Debug\net8.0\ref\ApiGetWay.dll
+C:\Users\us\Documents\C#\MicroservicesForInventory\ApiGetWay\obj\Debug\net8.0\ApiGetWay.sourcelink.json

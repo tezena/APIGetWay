@@ -1,65 +1,55 @@
 {
-  {
-    "Routes": [
-      //Product web Api 
-      {
-        "UpstreamPathTemplate": "/api/Product/products/{userId}",
-        "UpstreamHttpMethod": [ "Get" ],
-        "DownStreamScheme": "http",
-        "DownStreamHostAndPort": [
-          {
-            "Host": "productsWepApi",
-            "Port": 8080
-          }
-        ],
-
-        "DownStreamPathTemplate": "/api/Product/products"
-      },
-      {
-        "UpstreamPathTemplate": "/api/Product/{id}",
-        "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
-        "DownStreamScheme": "http",
-        "DownStreamHostAndPort": [
-          {
-            "Host": "productsWepApi",
-            "Port": 8080
-          }
-        ],
-        "DownStreamPathTemplate": "/api/Product/products/{id}"
-
-      },
-
-      //Account web api
-      {
-        "UpstreamPathTemplate": "/api/Accounts/Login",
-        "UpstreamHttpMethod": [ "Post" ],
-        "DownStreamScheme": "http",
-        "DownStreamHostAndPort": [
-          {
-            "Host": "AccountsWebApi",
-            "Port": 8080
-          }
-        ],
-        "DownStreamPathTemplate": "/api/Accounts/Login"
-
-      },
-      {
-        "UpstreamPathTemplate": "/api/Accounts/Register",
-        "UpstreamHttpMethod": [ "Post" ],
-        "DownStreamScheme": "http",
-        "DownStreamHostAndPort": [
-          {
-            "Host": "AccountsWebApi",
-            "Port": 8080
-          }
-        ],
-        "DownStreamPathTemplate": "/api/Accounts/Register"
-      }
-    ],
-    "GlobalConfiguretion": {
-      "BaseUrl": "http://localhost:8000"
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Product/products/{userId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/products/{userId}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Product/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "productservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Product/{id}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Accounts/Login",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Accounts/Login",
+      "UpstreamHttpMethod": [ "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Accounts/Register",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "accountservice",
+          "Port": 8080
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Accounts/Register",
+      "UpstreamHttpMethod": [ "Post" ]
     }
-
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8001"
   }
 }
-
